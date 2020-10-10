@@ -23,9 +23,9 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        tag_name: ${{ github.ref }}
-        release_name: Release ${{ github.ref }}
-        draft: false
+        tag_name: v0.1 #${{ github.ref }}
+        release_name: Release v0.1 #${{ github.ref }}
+        draft: true
         prerelease: false
     - name: Upload Release Asset
       id: upload-release-asset 
@@ -34,6 +34,6 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
-        asset_path: $HOME/output/com.elgato.counter.streamDeckPlugin
+        asset_path: ${HOME}/output/com.elgato.counter.streamDeckPlugin
         asset_name: com.elgato.counter.streamDeckPlugin
         asset_content_type: application/zip
