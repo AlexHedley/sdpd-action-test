@@ -13,6 +13,6 @@ jobs:
     
     - name: SDP Dist
       id: sdpd
-      uses: AlexHedley/streamdeckplugindistribution-test-action@v0.16
+      uses: AlexHedley/streamdeckplugindistribution-test-action@v0.17
       with:
         plugin_path: src\com.elgato.counter.sdPlugin
