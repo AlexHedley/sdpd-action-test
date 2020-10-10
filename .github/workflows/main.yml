@@ -1,0 +1,14 @@
+name: Build StreamDeck Plugin Distribution File
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: SDP Dist
+      id: sdpd
+      uses: AlexHedley/streamdeckplugindistribution-test-action@v0.1
