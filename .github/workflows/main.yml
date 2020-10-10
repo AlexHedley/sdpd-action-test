@@ -11,4 +11,4 @@ jobs:
     steps:
     - name: SDP Dist
       id: sdpd
-      uses: AlexHedley/streamdeckplugindistribution-test-action@v0.1
+      uses: AlexHedley/streamdeckplugindistribution-test-action@v0.2
