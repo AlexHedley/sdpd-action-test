@@ -7,9 +7,9 @@ on:
 
 jobs:
   deploy:
-    #runs-on: windows-latest 
+    runs-on: windows-latest 
     #runs-on: ubuntu-latest #not supported
-    runs-on: macos-latest
+    #runs-on: macos-latest
     steps:
     - uses: actions/checkout@v2
     
